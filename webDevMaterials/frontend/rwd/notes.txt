@@ -1,0 +1,21 @@
+take for example
+col-3. This will turn into col-md-3 or col-lg-3 or col-sm-3 depending on the devices
+
+note that
+col-sm-3 will become col-md-3 on a larger device and col-lg-3 on an even bigger device
+
+
+
+desktop
+d-none d-lg-block
+this blocks this element from displaying on medium and down
+
+tablet
+d-none d-sm-block
+this blocks this element from displaying on small and down (xs)
+
+small phone only 
+d-sm-none 
+so it wont display for anything larger than xs (sm+)
+Note that extra small width devices like the iphone require that you use the col-x tag.
+

@@ -1,0 +1,58 @@
+div {
+    border: 1px solid red;
+}
+
+body,html, body .container-fluid, #mainContent {
+
+    height: 100%;
+}
+
+#mobileSearchBox{
+    display: none;
+}
+.flexImageCard{
+    height: 220px;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .flexImageCard{
+        flex-basis: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 600px)
+{
+    .flexImageCard{
+        flex-basis: 33%;
+        
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    #sidebar{
+        display: none;
+    }
+    #desktopNav{
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+
+    #mobileNav{
+        display: none !important;
+    }
+
+    .flexImageCard{
+        flex-basis: 20%;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+
+  <form #f="ngForm" name="searchForm" (ngSubmit)="f.form.valid && onSubmit()">
+
+    <input #searchBox type="text" name="searchBox" class="form-control" required/>
+
+    <div *ngIf="f.submitted">
+      <div *ngIf="searchQuery.errors.required">The query is empty!</div>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+
+  </form>
+
+  <p class="m-5">
+    {{getSearchResults()}}
+  </p>
+
+
+
+
+</div>

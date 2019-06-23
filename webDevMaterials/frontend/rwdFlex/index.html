@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Playground</title>
+
+  <!--
+  <base href="/">
+    this will alter where you include files
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./styles.css">
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="container-fluid">
+
+
+    <div id="mobileNav" class="d-flex justify-content-between w-100">
+      <div id="mobileHamburger"><button class="btn"><i class="fa fa-align-justify"></i></button></div>
+      <div id="mobileLogo">Company Logo</div>
+      <div id="mobileSearchBox">
+
+        <form action="">
+          <input type="text" placeholder="Example Search" name="search">
+        </form>
+
+      </div>
+      <div id="mobileSearchButton"><button class="btn"><i class="fa fa-search w-100"></i></button></div>
+
+    </div>
+
+    <div id="desktopNav" class="d-flex justify-content-between w-100">
+      <div>Company Logo</div>
+      <div>
+        <input type="text" placeholder="type something">
+        <button class="btn btn-primary">Enter</button>
+
+      </div>
+
+      <div><button class="btn"><i class="fa fa-cog"></i></button></div>
+
+    </div>
+
+    <div class="row" id="mainContent">
+
+
+      <div class="d-flex flex-wrap col-md-10 justify-content-between align-content-around" id="cardContainer">
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+        <div class="flexImageCard">
+          <p>test</p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+  <script>
+    $("#mobileSearchButton").click(function () {
+
+      $("#mobileLogo").toggle("fast");
+      $("#mobileSearchBox").toggle("fast");
+      $("#mobileHamburger").toggle("fast");
+
+
+      $(this).toggleClass(
+        "bg-success"
+      );
+      $("#mobileNav").toggleClass(
+        'justify-content-between', 'remove',
+      ).addClass('justify-content-center');
+
+
+
+    });
+
+
+    
+
+    console.log(
+
+
+
+
+    )
+
+
+
+
+  </script>
+
+
+
+</body>
+
+
+</html>

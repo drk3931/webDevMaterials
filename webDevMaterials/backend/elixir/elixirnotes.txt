@@ -1,0 +1,93 @@
+Everything in elixir is an expression that has a return value including if, case, and functions 
+
+Elixir is a dynamic programming language, which means you don’t explicitly declare a
+variable or its type. Instead, the variable type is determined by whatever data it contains
+at the moment.
+
+Rebinding doesn’t mutate the existing memory location. It reserves new memory and
+reassigns the symbolic name to the new location.
+
+variables are mutable, but the data they point to is immutable.
+elixir is garbage collected, when a variable is out of scope it is eligible for garbage collection
+
+A module is a collection of functions, somewhat like a namespace. Every Elixir func-
+tion must be defined inside a module
+
+IO.puts("hello world");
+prits and returns :ok symbol
+
+In the source code, a module must be defined in a single file. A single file may contain
+multiple module definitions:
+
+
+Notice that defmodule and def aren’t referred to as keywords. That’s
+because they’re not! Instead, these are compilation constructs called macros.
+
+The return value of a function is the return value of its last expression.
+There’s no explicit return in Elixir.
+
+-5 |> abs()
+
+a pipe operator
+
+Arity is a fancy name for the number of arguments a function receives. A function is
+uniquely identified by its containing module, its name, and its arity.
+
+def sum(a) do
+sum(a, 0)
+end
+
+def sum(a, b) do
+a+b
+end
+
+delegating to higher arity 
+or, use a default 0 arguments
+
+def sum(a, b \\ 0) do
+a + b
+end
+
+Always keep in mind that default values generate multiple functions of the same name
+with different arities.
+
+Because arity distinguishes multiple functions of the same name, it’s not possible to
+have a function accept a variable number of arguments. 
+There’s no counterpart of C’s …
+or JavaScript’s arguments 
+
+defp makes a function private to the module., def makes it public or exported.
+import a module in another module
+defmodule MyModule do
+    import IO
+    #or even alias IO, as : MyIO
+    # alias Geometry.Rectangle allows you to call Rectangle.______
+    def my_function do
+      puts "Calling imported function."
+    end
+end
+the Kernel library is implicitly loaded into every module
+
+defmodule Circle do
+@pi 3.14159
+...
+
+The important thing about the @pi constant is that it exists only during the compila-
+tion of the module, when the references to it are inlined.
+
+Moreover, an attribute can be registered, which means it will be stored in the gener-
+ated binary and can be accessed at runtime. 
+Elixir registers some module attributes by
+default. For example, the attributes @moduledoc and @doc can be used to provide docu-
+mentation for modules and functions:
+
+Typespecs provide a way of compensating for the lack of a static type system. This can be
+useful in conjunction with the dialyzer tool to perform static analysis of your programs.
+
+List.insert_at/3:
+@spec insert_at(list, integer, any) :: list
+the 3 indicates how many arguments
+
+----------------------------------------------
+The type system
+

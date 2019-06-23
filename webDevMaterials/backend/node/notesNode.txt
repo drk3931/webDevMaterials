@@ -1,0 +1,12 @@
+//useful if package install fails
+npm cache clean --force
+
+//recieve response info from command line
+-s indicates only response body
+curl -s localhost:8080/...
+
+
+
+
+//on windows
+npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"

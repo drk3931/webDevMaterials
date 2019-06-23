@@ -1,0 +1,19 @@
+proxy.conf.json 
+
+expands any request like
+
+http.post("/api/getUser") -> "localhost:3000/getUser"
+
+
+------------------
+VALIDATION
+
+the button element has a default action of submit 
+https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-button-element
+so putting it anywhere inside of a form element will cause it to submit the form
+
+required— the form control should not have an empty field.
+minlength— the form control should have a value of the specified minimum length.
+maxlength— the form control should have a value of the specified maximum length.
+pattern—  the form control value should match a given regex value.
+email- has to match an email

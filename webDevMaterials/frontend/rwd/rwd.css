@@ -1,0 +1,35 @@
+div {
+    border: 1px solid red;
+}
+
+
+/*
+border-box tells the browser to account for any border and padding in the values you specify for an 
+element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added
+Important because if we dont do this and we add a 5px border it will overflow outside and tends
+to become an annoying problem especially in the bootstrap colum based system 
+*/
+html {
+  box-sizing: border-box;
+}
+
+/*
+  automatically take up the entire screen height 
+*/
+html,body{
+  height: 100%;
+}
+
+/*
+
+  this makes sub html tags actually inherit the box sizing your defined
+  https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.fullHeight{
+    height: 100%;
+}

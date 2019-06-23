@@ -1,0 +1,3 @@
+//inspecting an object
+const util = require('util')
+console.log(util.inspect(myObject));

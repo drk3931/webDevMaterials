@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*NOTE: if you dont use an angular theme certain components seem to break
+  like dialogref, since this is in styles this  css gets loaded lass 
+  */
+
+  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
