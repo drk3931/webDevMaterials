@@ -1,6 +1,6 @@
 "use strict";
 
-//alter process to add environment variables
+//grab environment variables
 require('dotenv').config();
 var express = require('express');
 var playgroundApp = express();
@@ -56,8 +56,7 @@ playgroundApp.post(
                 else
                     res.status(400).json(info);
               
-            })
-            (req, res)
+            })(req, res)
     }
 
 
