@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <!--
+        If this meta tag isnt here the min width queries will break
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexible No Scroll</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    /*
+        This makes borders stay inside of an element, without this if 2 elements each take 50% space
+        and one has a border, it will actually go on the next line because the border causes it to exceed
+        the 50% space
+    */
+    * {
+        box-sizing: border-box !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+
+    /*
+        we want the title to take up 100% of the screen space
+        */
+
+    .title {
+        width: 100%;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+
+
+    /*
+    a lot of web browsers add some margin by default
+    
+    */
+    html,
+    body {
+
+        /*
+            First take out any margin the web browser adds automatically. 
+            min-heighgt 100% makes it so that adding a sidebar will allow it to take up all the needed space
+        */
+        margin: 0;
+        min-height: 100% !important;
+    }
+
+    .container {
+
+
+        display: flex;
+        flex-wrap: wrap;
+
+
+        min-height: 100% !important;
+
+        border: 10px solid blue;
+
+
+        justify-content: space-between;
+        align-content: space-around;
+    }
+
+
+
+    .col {
+
+        width: 33%;
+
+        text-align: center !important;
+
+        /*
+        This tells the column to start at the width of whatever the content inside tells it to be
+        The 0 says dont grow more,
+        The 1 says shrink to fit the 33%
+        */
+
+        flex: 0 1 auto;
+
+
+
+        border: 1px solid black;
+        border-radius: 5px;
+
+    }
+
+
+    img {
+        max-width: 200px;
+        max-height: 180px;
+        object-fit: contain;
+    }
+
+
+
+    /*
+    if this media query isnt placed below the col and container classes it wont get recognized
+    */
+
+
+
+    @media (max-width: 400px) {
+        .container {
+            display: block;
+        }
+
+        .col {
+            width: 100%;
+        }
+
+
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="title">
+            <h1>Webpage Title</h1>
+        </div>
+
+
+
+        <div class="col">
+            <h1>
+                Title
+            </h1>
+            <img
+                src="https://images.vexels.com/media/users/3/139357/isolated/lists/0b02b78621072a6c80c868b425595b90-filled-hexagram-star.png">
+            <p>description</p>
+        </div>
+        <div class="col">
+            <h1>
+                Title
+            </h1>
+            <img
+                src="https://images.vexels.com/media/users/3/139357/isolated/lists/0b02b78621072a6c80c868b425595b90-filled-hexagram-star.png">
+            <p>description</p>
+        </div>
+        <div class="col">
+            <h1>
+                Title
+            </h1>
+            <img
+                src="https://images.vexels.com/media/users/3/139357/isolated/lists/0b02b78621072a6c80c868b425595b90-filled-hexagram-star.png">
+            <p>description</p>
+        </div>
+        <div class="col">
+            <h1>
+                Title
+            </h1>
+            <img
+                src="https://images.vexels.com/media/users/3/139357/isolated/lists/0b02b78621072a6c80c868b425595b90-filled-hexagram-star.png">
+            <p>description</p>
+        </div>
+        <div class="col">
+            <h1>
+                Title
+            </h1>
+            <img
+                src="https://images.vexels.com/media/users/3/139357/isolated/lists/0b02b78621072a6c80c868b425595b90-filled-hexagram-star.png">
+            <p>description</p>
+        </div>
+        <div class="col">
+            <h1>
+                Title
+            </h1>
+            <img
+                src="https://images.vexels.com/media/users/3/139357/isolated/lists/0b02b78621072a6c80c868b425595b90-filled-hexagram-star.png">
+            <p>description description description description description description description description</p>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

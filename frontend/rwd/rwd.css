@@ -10,11 +10,12 @@ Important because if we dont do this and we add a 5px border it will overflow ou
 to become an annoying problem especially in the bootstrap colum based system 
 */
 html {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 /*
-  automatically take up the entire screen height 
+  automatically take up the entire screen height so if we say add a sidebar it will
+  automatically go from the top to the bottom
 */
 html,body{
   height: 100%;
